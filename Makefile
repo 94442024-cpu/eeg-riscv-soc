@@ -1,5 +1,6 @@
 IVERILOG ?= iverilog
 VVP ?= vvp
+PYTEST ?= pytest
 BUILD_DIR := sim/build
 CORE_RTL := rtl/core/alu.v rtl/core/regfile.v rtl/core/imm_gen.v rtl/core/control.v rtl/core/instr_mem.v rtl/core/data_mem.v rtl/core/riscv_core.v
 
@@ -8,7 +9,7 @@ CORE_RTL := rtl/core/alu.v rtl/core/regfile.v rtl/core/imm_gen.v rtl/core/contro
 test: test-python test-rtl
 
 test-python:
-	C:/Users/Administrator/EEG_CHIP/.venv/Scripts/pytest.exe models/golden/test_rv32i.py -q
+	$(PYTEST) models/golden/test_rv32i.py -q
 
 test-rtl: $(BUILD_DIR)/test_rv32i_blocks.vvp $(BUILD_DIR)/test_decode_imm.vvp $(BUILD_DIR)/test_memory.vvp $(BUILD_DIR)/test_riscv_core.vvp $(BUILD_DIR)/test_riscv_core_regression.vvp $(BUILD_DIR)/test_control_flow.vvp
 	$(VVP) $(BUILD_DIR)/test_rv32i_blocks.vvp
