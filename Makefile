@@ -4,9 +4,12 @@ PYTEST ?= pytest
 BUILD_DIR := sim/build
 CORE_RTL := rtl/core/alu.v rtl/core/regfile.v rtl/core/imm_gen.v rtl/core/control.v rtl/core/instr_mem.v rtl/core/data_mem.v rtl/core/riscv_core.v
 
-.PHONY: test test-python test-rtl clean
+.PHONY: test test-python test-rtl test-cocotb clean
 
 test: test-python test-rtl
+
+test-cocotb:
+	python tb/cocotb/run.py
 
 test-python:
 	$(PYTEST) models/golden/test_rv32i.py -q

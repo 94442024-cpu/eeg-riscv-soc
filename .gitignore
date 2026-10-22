@@ -8,6 +8,7 @@ __pycache__/
 sim/build/
 sim/work/
 sim/waves/
+sim/cocotb/
 *.vcd
 *.fst
 *.lxt
@@ -15,6 +16,7 @@ sim/waves/
 # Cocotb and simulator output
 results.xml
 coverage.xml
+tb/cocotb/__pycache__/
 
 # FPGA and ASIC generated output
 fpga/build/
