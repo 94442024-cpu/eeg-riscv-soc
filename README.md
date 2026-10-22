@@ -6,9 +6,9 @@ The system will combine a small RV32I RISC-V host core with a memory-mapped conv
 
 ## Current Status
 
-Phase 0: repository and verification foundation.
+Phase 1: RV32I single-cycle host core implemented and passing directed, integration, and cocotb smoke tests.
 
-Phase 1 will implement the RV32I host core in `rtl/core/` and verify it with cocotb and a Python reference model.
+The remaining Phase 1 work is compliance-oriented coverage, linting, and a cleaner external memory interface before starting the Phase 2 interconnect.
 
 ## Planned System
 

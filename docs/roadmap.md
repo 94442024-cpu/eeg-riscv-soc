@@ -9,7 +9,7 @@ This roadmap is deliberately incremental. Each phase must have passing tests and
 - Toolchain documentation
 - Initial architecture and verification plans
 
-## Phase 1 - RV32I Host Core
+## Phase 1 - RV32I Host Core (in progress)
 
 - Instruction decoder and immediate generator
 - Register file with hardwired `x0`
@@ -17,6 +17,7 @@ This roadmap is deliberately incremental. Each phase must have passing tests and
 - Single-cycle control and PC update logic
 - Local instruction and data memories for simulation
 - Directed and randomized instruction tests
+- Cocotb smoke test and repeatable local regression
 - Relevant `rv32ui` compliance tests
 
 ## Phase 2 - SoC Interconnect
