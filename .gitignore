@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Simulation output
+sim/build/
+sim/work/
+sim/waves/
+*.vcd
+*.fst
+*.lxt
+
+# Cocotb and simulator output
+results.xml
+coverage.xml
+
+# FPGA and ASIC generated output
+fpga/build/
+asic/build/
+asic/runs/
+*.rpt
+*.log
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
